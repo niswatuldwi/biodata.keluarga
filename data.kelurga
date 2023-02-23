@@ -1,0 +1,89 @@
+using System;
+
+namespace MyApplication
+{
+  class Keluarga
+  {
+    public string Name   
+    { get; set; }  
+    public string Ttl
+    { get; set; }
+    public string Umur
+    { get; set; }
+    public virtual void hobi(){
+        Console.WriteLine("hobi");
+    }
+  }
+  class Ayah : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: memancing");
+      }
+  }
+  class Ibu : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: memasak");
+      }
+  }
+  class Aku : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: berenang");
+      }
+  }
+  class Adek : Keluarga {
+      public override void hobi(){
+          Console.WriteLine("hobi: olahraga");
+      }
+  }
+  class Program
+  {  
+    static void Main(string[] args)
+    {
+      Keluarga myAy = new Keluarga();
+      myAy.Name = "sugiono";
+      myAy.Ttl  =" probolinggo 20 agustus";
+      myAy.Umur ="42";
+      Console.WriteLine("nama ayah:" + myAy.Name);
+Console.WriteLine("Ttl:" + myAy.Ttl);
+Console.WriteLine("Umur:"+ myAy.Umur);
+      Keluarga myAyah = new Ayah();
+      myAyah.hobi();
+      //biodata Ayah
+      Console.WriteLine("===============");
+      Keluarga myIb = new Keluarga();
+      myIb.Name = "fitriani";
+      myIb.Ttl  =" pasuruan 28 september";
+      myIb.Umur ="42";
+      Console.WriteLine("nama ibu:" + myIb.Name);
+Console.WriteLine("Ttl:" + myIb.Ttl);
+Console.WriteLine("Umur:"+myIb.Umur);
+      Keluarga myIbu = new Ibu();
+      myIbu.hobi();
+      //biodata ibu
+      Console.WriteLine("===============");
+      Keluarga myAk = new Keluarga();
+      myAk.Name = "niswatul dwi khotimah";
+      myAk.Ttl  =" pasuruan 2 juli";
+      myAk.Umur ="15";
+      Console.WriteLine("nama Aku:" + myAk.Name);
+Console.WriteLine("Ttl:" + myAk.Ttl);
+Console.WriteLine("Umur:"+ myAk.Umur);
+      Keluarga myAku = new Aku();
+      myAku.hobi();
+      //biodata Aku
+      Console.WriteLine("===============");
+      Keluarga myAdek = new Keluarga();
+      myAdek.Name = "nadhif fayyat bahtiar";
+      myAdek.Ttl  =" pasuruan 5 novembeber";
+      myAdek.Umur ="8";
+      Console.WriteLine("nama Adek:" + myAdek.Name);
+Console.WriteLine("Ttl:" + myAdek.Ttl);
+Console.WriteLine("Umur:"+ myAdek.Umur);
+      Keluarga myAd = new Adek();
+      myAd.hobi();
+      //biodata Adek
+      
+
+
+    }
+  }
+}
